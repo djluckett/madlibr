@@ -1,5 +1,3 @@
-text = "The predictor <__> was <__> with a p-value of <__>, after adjusting for <__>"
-
 #' Internal Constructor for Madlib Object
 #'
 #' This is the internal construction function for an object of class "madlib."
