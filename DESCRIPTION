@@ -1,0 +1,13 @@
+Package: madlibr
+Type: Package
+Title: Easy Madlib-Style Formatting For Auto-Generated Text
+Version: 0.1.0
+Author: Daniel Luckett
+Maintainer: Daniel Luckett <daniel.luckett.work@gmail.com>
+Description: When writing text for analytical reports, figure captions, and 
+    dashboards, it is often necessary for text to adapt to statistics and 
+    results. The madlib package solves this problem with a straightforward, 
+    madlib-style interface.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
