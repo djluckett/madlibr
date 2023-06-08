@@ -11,3 +11,9 @@ test_that("Creating a madlib works", {
   text3 = 5
   expect_error(madlib(text3))
 })
+
+test_that("We can correctly count the number of blanks to fill", {
+  text = "The predictor <__> was <__>, with a p-value of <__>, after adjusting for <__>"
+  x = madlib(text)
+  expect_equal(count_blanks(x), 4)
+})
