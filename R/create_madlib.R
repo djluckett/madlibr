@@ -19,8 +19,6 @@ new_madlib = function(x = character()) {
 #' @return x. Primarily called for the side effect of throwing an error
 #'   message if x is not a valid madlib.
 validate_madlib = function(x) {
-  # Verify that madlib text contains at least one blank ("<__>")
-
   # Check class and structure of object
   if (!("madlib" %in% class(x))) {
     stop("Attempting to validate an object that is not a madlib.")
@@ -48,5 +46,4 @@ validate_madlib = function(x) {
 madlib = function(x) {
   x = new_madlib(x)
   validate_madlib(x)
-
 }
