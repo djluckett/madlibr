@@ -17,3 +17,12 @@ test_that("We can correctly count the number of blanks to fill", {
   x = madlib(text)
   expect_equal(count_blanks(x), 4)
 })
+
+test_that("A basic madlib with only string components can be filled", {
+  text = "The model for <__> was adjusted for <__>."
+  x = madlib(text)
+  component1 = madlib_string("mortality")
+  component2 = madlib_string("age")
+  output = fill(x, component1, component2)
+  expect_equal(output, "The model for mortality was adjusted for age.")
+})
