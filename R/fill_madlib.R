@@ -14,7 +14,7 @@ fill = function(x, ...) {
 
 #' Fill Madlib
 #'
-#' Function to fill the blanks in a madlib with appropriately formatated
+#' Function to fill the blanks in a madlib with appropriately formatted
 #'   components and return the result as a formatted string.
 #'
 #' @param x A madlib object
