@@ -26,3 +26,14 @@ test_that("A basic madlib with only string components can be filled", {
   output = fill(x, component1, component2)
   expect_equal(output, "The model for mortality was adjusted for age.")
 })
+
+test_that("A madlib works with strings already formatted for sprintf", {
+  text = "The model for %s was adjusted for <__>."
+  x = madlib(text)
+  component1 = madlib_string("age")
+  output1 = fill(x, component1)
+  expect_equal(output1, "The model for %s was adjusted for age.")
+
+  output2 = sprintf(output1, "mortality")
+  expect_equal(output2, "The model for mortality was adjusted for age.")
+})
