@@ -37,9 +37,13 @@ fill.madlib = function(x, ...) {
   # Format all components
   components = lapply(components, format_component)
 
-  # Fill madlib using sprintf
-  x = gsub("<__>", "%s", x)
-  do.call(sprintf, c(x, components))
+  # Fill madlib components one at a time using sub
+  for (i in seq_along(1:length(components))) {
+    x = sub("<__>", components[i], x, fixed = TRUE)
+  }
+
+  # Strip off the madlib class before returning the output
+  as.character(x)
 }
 
 #' Count The Number of Blanks
